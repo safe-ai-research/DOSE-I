@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Predicting Sedation Depth in Endoscopy with a Large Clinically Annotated EEG Dataset of Continuous Propofol Sedation.">
+        content="Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Predicting Sedation Depth in Endoscopy with a Large Clinically Annotated EEG Dataset of Continuous Propofol Sedation</title>
+  <title>Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://www.umh.de/innere1">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,9 +63,10 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://gepris.dfg.de/gepris/projekt/547230187">
+            SAFE-AI
           </a>
+          <!--
           <a class="navbar-item" href="https://nerfies.github.io">
             Nerfies
           </a>
@@ -75,6 +76,7 @@
           <a class="navbar-item" href="https://photoshape.github.io">
             PhotoShape
           </a>
+           -->
         </div>
       </div>
     </div>
@@ -93,9 +95,10 @@
             <span class="author-block">
               <a href="https://www.umh.de/einrichtungen/kliniken-und-departments/department-fuer-innere-medizin/innere-medizin-i-gastroenterologie-pneumologie/">Jakob Garbe</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://websrv.physik.uni-halle.de/Fachgruppen/kantel/">Jan W. Kantelhardt</a><sup>2</sup>,</span>
-            <span class="author-block">
               <a href="http://www.umh.de/nwg-schmid">Quang Vu Nguyen</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://websrv.physik.uni-halle.de/Fachgruppen/kantel/">Jan W. Kantelhardt</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://www.ameos.de/klinikum-warendorf/">Florian Dünninghaus</a><sup>4</sup>,
@@ -113,7 +116,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University Hospital Halle, Halle (Saale), Germany,</span>
-            <span class="author-block"><sup>2</sup>Martin-Luther University Halle-Wittenberg, Faculty of Natural Sciences II, Institute of Physics, Halle (Saale), Germany  %\email{jan.kantelhardt@physik.uni-halle.de},</span>
+            <span class="author-block"><sup>2</sup>Martin-Luther University Halle-Wittenberg, Faculty of Natural Sciences II, Institute of Physics, Halle (Saale), Germany,</span>
             <span class="author-block"><sup>3</sup>Martin Luther University Halle-Wittenberg, Medical Faculty, Digital Research Methods in Medicine Group, Halle (Saale), Germany,</span>
             <span class="author-block"><sup>4</sup>AMEOS Klinikum Warendorf, Department of Internal Medicine, Warendorf, Germany,</span>
             <span class="author-block"><sup>5</sup>Philipps-University Marburg, Department of Neurology, Marburg, Germany,</span>
@@ -131,16 +134,6 @@
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
-                </a>
-              </span>
-              <!-- arXiv Link. 
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
                 </a>
               </span>
               <!-- Video Link. 
@@ -173,6 +166,17 @@
                   </span>
                   <span>Data</span>
                   </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Documentation</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -191,13 +195,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Brain function monitors are a widely used tool in general anesthesia. For monitoring drug effects in procedural sedation, however, no objective device is currently available.
-            While available monitors offer no clinically significant benefit in sedation, the reasons why are not well understood and labeled data is lacking. 
-            To enable a data-driven approach for sedation depth prediction, we collected 2-channel fronto-temporal EEG signal enhanced with additional biosignals during Propofol sedation for gastrointestinal and bronchoscopic endoscopies. 
-            Recordings were annotated in real-time with clinical events and the State of Consciousness (SoC) as well as clinical Sedation Depth.
-            171 patients were enrolled comprising 78.5 hours of multimodal biosignal data with 1129 transitions of the SoC and 7328 sedation depth data points measured on the MOAA/S scale.  
-            Applying advanced feature engineering and basic machine learning, we demonstrate that this data is suitable for researching and predicting SoC and sedation depth. 
-            Further, we present the resulting dataset as the first public large-scale EEG-based multimodal dataset in routine procedural sedation with rich clinical labeling.
+            Brain function monitors are a widely used tool in general
+            anesthesia. For monitoring drug effects in procedural sedation, however,
+            no objective device is currently available. While available monitors offer
+            no clinically significant benefit in sedation, the reasons why are not well
+            understood and labeled data is lacking. To enable a data-driven approach
+            for sedation depth prediction, we collected 2-channel fronto-temporal
+            EEG signal enhanced with additional biosignals during Propofol sedation 
+            for gastrointestinal and bronchoscopic endoscopies. Recordings were
+            annotated in real-time with clinical events and the State of Consciousness
+            (SoC) as well as clinical Sedation Depth. 171 patients were enrolled 
+            comprising 78.5 hours of multimodal biosignal data with 1129 transitions of
+            the SoC and 7328 sedation depth data points measured on the MOAA/S
+            scale. Applying advanced feature engineering and basic machine learning, 
+            we demonstrate that this data is suitable for predicting SoC and
+            provides a sound foundation for research towards reliable prediction of
+            sedation depth. Notably, we introduce the underlying CLOSE-I dataset
+            as the first public large-scale EEG-based multimodal dataset in routine
+            procedural sedation with rich clinical labeling. 
           </p>
         </div>
       </div>
@@ -367,6 +382,39 @@
 }</code></pre>
   </div>
 </section>
+
+  <!-- Acknowledgements. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            This work was supported by Deutsche Forschungsgemeinschaft (DFG, German Research 
+            Foundation) under <a href="https://gepris.dfg.de/gepris/projekt/547230187">Project number 547230187</a>. We thank the
+            neurologists Dr. Josephin Damm (Halle, Germany) and Dr. Leona Möller (Marburg,
+            Germany) for annotation of EEGs and for their insights into signal quality and 
+            bioinformatician Dr Jan Grau for sharing and discussing his early prototype SoC
+            classifier
+          </p>
+          <p>
+            
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+  
 
 
 <footer class="footer">
