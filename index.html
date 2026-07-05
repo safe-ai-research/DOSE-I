@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="DOSE-I: A Multimodal Biosignal Dataset of Procedural Sedation for Endoscopy">
+        content="Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation">
   <meta name="keywords" content="DOSE-I, EEG, procedural sedation, propofol, biosignals, sedation depth, state of consciousness">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DOSE-I: A Multimodal Biosignal Dataset of Procedural Sedation for Endoscopy</title>
+  <title>Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of
+Continuous Propofol Sedation
+</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -76,10 +78,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DOSE-I: A Multimodal Biosignal Dataset of Procedural Sedation for Endoscopy</h1>
+          <h1 class="title is-1 publication-title">Towards Predicting Sedation Depth in Endoscopy
+with Large Clinically Annotated EEG Data of Continuous Propofol Sedation </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.umh.de/einrichtungen/kliniken-und-departments/department-fuer-innere-medizin/innere-medizin-i-gastroenterologie-pneumologie/">Jakob Garbe</a><sup>1</sup>,</span>
+              <a href="https://www.umh.de/einrichtungen/kliniken-und-departments/department-fuer-innere-medizin/innere-medizin-i-gastroenterologie-pneumologie/">Jakob Garbe</a><sup>1</sup> <i class="fas fa-envelope" style="font-size: 0.7em;"></i>,</span>
             <span class="author-block">
               <a href="http://www.umh.de/nwg-schmid">Quang Vu Nguyen</a><sup>2</sup>,
             </span>
@@ -96,7 +99,7 @@
               <a href="http://www.umh.de/nwg-schmid">Katja Seeliger</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.umh.de/nwg-schmid">Thomas Schmid</a><sup>2,1,6</sup>
+              <a href="http://www.umh.de/nwg-schmid">Thomas Schmid</a><sup>2,6,7</sup>
             </span>
           </div>
 
@@ -106,8 +109,10 @@
             <span class="author-block"><sup>3</sup>Martin-Luther University Halle-Wittenberg, Faculty of Natural Sciences II, Institute of Physics, Halle (Saale), Germany,</span>
             <span class="author-block"><sup>4</sup>AMEOS Klinikum Warendorf, Department of Internal Medicine, Warendorf, Germany,</span>
             <span class="author-block"><sup>5</sup>Philipps-University Marburg, Department of Neurology, Marburg, Germany,</span>
-            <span class="author-block"><sup>6</sup>Lancaster University Leipzig, Leipzig, Germany.</span>
+            <span class="author-block"><sup>6</sup>University Hospital Halle, Research Center Data Analytics, Halle (Saale), Germany,</span>
+            <span class="author-block"><sup>7</sup>Lancaster University Leipzig, Leipzig, Germany.</span>
           </div>
+
           
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -134,7 +139,7 @@
               -->
               <!-- Code Link. Actual: https://github.com/safe-ai-research/DOSE-I-Code -->
               <span class="link-block">
-                <a href="https://github.com/seelikat/DOSE-I-Code" 
+                <a href="https://github.com/safe-ai-research/DOSE-I-Code"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -152,7 +157,7 @@
                   <span>Data</span>
                   </a>
               </span>
-              <!-- TODO: Replace DOCUMENTATION LINK after arXiv is processed here. -->
+              <!--
               <span class="link-block">
                 <a href="DOSE_I_Dataset_Documentation.pdf"
                    class="external-link button is-normal is-rounded is-dark">
@@ -162,6 +167,7 @@
                   <span>Documentation</span>
                   </a>
               </span>
+              -->
             </div>
 
           </div>
@@ -189,44 +195,169 @@
   </div>
 </section>
 
-<section class="section">
+  <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Usage</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Key Findings</h2>
+
         <div class="content has-text-justified">
           <p>
-            The dataset and its initial analysis are presented in the AIME 2026 conference paper <a href="https://doi.org/10.1007/978-3-032-30813-9_58">"Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation"</a>. Technical details relevant to working with the dataset are provided in the accompanying documentation <a href="DOSE_I_Dataset_Documentation.pdf"><strong>"DOSE-I: A Multimodal Biosignal Dataset of Procedural Sedation for Endoscopy"</strong></a>.
+            Our preliminary study demonstrates the potential of clinically annotated EEG datasets and established machine learning methods to support future AI-based monitoring of sedation during endoscopy.
+            Key findings of this work are:
+            <ol>
+              <li>
+              The best overall performance was achieved by a random forest, with a mean accuracy of
+              <strong>74.1%</strong> and an <strong>F1 score of 76.4%</strong>, outperforming both a
+              decision tree and a neural network.
+              </li>
+              <li>
+              The random forest also showed more consistent performance across validation folds,
+              with lower variability than the neural network while maintaining higher scores
+              across all evaluated metrics.
+              </li>
+              <li>
+              Combining engineered EEG features with additional
+              clinical information can support prediction of a patient's upcoming state of
+              consciousness.
+              </li>
+            </ol>
           </p>
+          <figure style="margin-top: 2rem; text-align: center;">
+            <img src="static/images/10CV_Boxplots.png"
+                 alt="10-fold cross-validation boxplots"
+                 style="max-width: 100%; height: auto;">
+            <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-style: italic;">
+              10-fold cross-validation results comparing classifier performance.
+            </figcaption>
+          </figure>
         </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Work</h2>
+
+          <div class="notification is-light">
+        <ul style="list-style: disc outside; padding-left: 1.5rem;">
+        <li>
+          Our <em>United European Gastroenterology Journal</em> artcle
+            <a href="https://onlinelibrary.wiley.com/doi/10.1177/2050640620959153" target="_blank" rel="noopener">
+              Capability of Processed EEG Parameters to Monitor Conscious Sedation in Endoscopy Is Similar to General Anaesthesia
+            </a> (2021)
+            demonstrates that processed EEG parameters can reliably monitor conscious sedation during endoscopic procedures with performance comparable to monitoring during general anaesthesia.
+        </li>
+        <li>
+          Our <em>Der Gastroenterologe</em> article
+            <a href="https://link.springer.com/article/10.1007/s11377-020-00494-z" target="_blank" rel="noopener">
+              Monitoring of Conscious Sedation in Endoscopy with Artificial Intelligence
+          </a> (2021)
+          presents artificial intelligence approaches for EEG-based sedation monitoring, highlighting the potential of machine learning for objective assessment during endoscopy.
+        </li>
+        <li>
+          Our <em>Wiener klinisches Magazin</em> review
+            <a href="https://link.springer.com/article/10.1007/s00740-021-00424-x" target="_blank" rel="noopener">
+              Monitoring of Conscious Sedation in Endoscopy with Artificial Intelligence
+          </a> (2021)
+          argues that while current EEG-based sedation monitors are inadequate for endoscopic procedures, artificial intelligence—particularly neural network analysis of EEG and other biosignals—offers a promising path toward objective, real-time monitoring of sedation depth and improved patient safety during endoscopy.
+        </li>
+        <li>
+          Anne Klimpel's bachelor thesis
+             <a href="https://websrv.physik.uni-halle.de/Fachgruppen/kantel/Bachelorarbeit_Klimpel.pdf" target="_blank" rel="noopener">
+                EEG Parameters for Detecting Sedation Depth</a> (2020)
+             investigates EEG-derived parameters for estimating the depth of sedation and their suitability for clinical monitoring.
+        </li>
+    </ul>
+  </div>
+
       </div>
     </div>
   </div>
 </section>
 
+  <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Data</h2>
 
+        <div class="content has-text-justified">
+          <p>
+            The underlying DOSE-I dataset is available for download <a href="https://zenodo.org/records/18483292">via Zenodo</a>. Accompanying this dataset, we have published a comprehensive technical documentation <a href="https://www.arxiv.org">on arXiv</a>.
+          </p>
+          <p>
+            The DOSE-I data includes five primary biosignals:
+            <ul>
+              <li>ECG is recorded at 500 Hz in mV with a ±500 mV range using a 3-lead configuration.</li>
+              <li>EEG is sampled at 125 Hz in microvolts with a ±187.5 µV range across two channels and multiple electrode pairs.</li>
+              <li>Plethysmography (PLETH), sampled at 125 Hz with a 0–100 range via a finger sensor.</li>
+              <li>Respiration (RESP), recorded at 62.5 Hz using impedance-based measurements.</li>
+              <li>Non-invasive Blood pressure, measured every 3 minutes across systolic, mean, and diastolic values using three channels.</li>
+            </ul>
+            This data is further annotated with state-of-consciousness, MOAS/S, and clinical events. For a sample recording, see below.
+          </p>
+
+
+          <figure style="margin-top: 2rem; text-align: center;">
+            <img src="static/images/10-033_plot.png"
+                 alt="EEG plot from recording 10-033"
+                 style="max-width: 100%; height: auto;">
+            <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-style: italic;">
+              EEG recording from procedure 10-033 showing transitions in state of consciousness.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Code</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Accompanying code for analysis of the DOSE-I dataset is available
+            <a href="https://github.com/safe-ai-research/DOSE-I-Code">via our Github repository</a>.
+          </p>
+          <p>
+            The repository includes tools for converting
+            raw EEG data into a comprehensive set of processed EEG (pEEG) parameters,
+            documentation of all extracted features, and machine-learning models for
+            binary classification of conscious versus unconscious states.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@dataset{garbe_2026_18483291,
-author       = {Garbe, Jakob and
-Nguyen, Quang Vu and
-Kantelhardt, Jan W. and
-Dünninghaus, Florian and
-Erffmeier, Karla and
-Seeliger, Katja and
-Schmid, Thomas},
-title        = {DOSE-I: A Multimodal Biosignal Dataset of
-Procedural Sedation for Endoscopy
-},
-month        = jul,
-year         = 2026,
-publisher    = {Zenodo},
-doi          = {10.5281/zenodo.18483291},
-url          = {https://doi.org/10.5281/zenodo.18483291},
-}</code></pre>
+    When citing this study and our DOSE-I research in general, please use the following reference:
+    <pre><code>@incollection{garbe2026sedationEEG,
+  author    = {Garbe, Jakob and Nguyen, Quang Vu and Kantelhardt, Jan W. and Dünninghaus, Florian
+               and Erffmeier, Karla and Seeliger, Katja and Schmid, Thomas},
+  title     = {Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated
+               EEG Data of Continuous Propofol Sedation},
+  booktitle = {Artificial Intelligence in Medicine},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {16749},
+  publisher = {Springer},
+  year      = {2026}
+}
+</code></pre>
   </div>
 </section>
   
@@ -239,7 +370,7 @@ url          = {https://doi.org/10.5281/zenodo.18483291},
 
         <div class="content has-text-justified">
           <p>
-            This work was supported by Deutsche Forschungsgemeinschaft (DFG, German Research 
+            This work was supported by <em>Deutsche Forschungsgemeinschaft<em> (DFG, German Research
             Foundation) under <a href="https://gepris.dfg.de/gepris/projekt/547230187">Project number 547230187</a>. We thank the
             neurologists Dr. Josephin Damm (Halle, Germany) and Dr. Leona Möller (Marburg,
             Germany) for annotation of EEGs and for their insights into signal quality, and 
@@ -255,34 +386,29 @@ url          = {https://doi.org/10.5281/zenodo.18483291},
  <!-- Acknowledgements. -->  
 
 
+
 <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <!-- 
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    -->
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>. This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-          </p>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <img id="footer_image" src="./static/images/footer_neu.png" alt="Footer Image" width="100%">
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-size-7">
+          <div class="content has-text-centered">
+            <p>
+              This website was adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+              project page.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </footer>
+
+
 
 </body>
 </html>
