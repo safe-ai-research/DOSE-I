@@ -6,24 +6,18 @@ The DOSE-I dataset is available on [Zenodo](https://doi.org/10.5281/zenodo.18483
 
 The initial analysis of the dataset is presented in the AIME 2026 conference paper [*Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation*](https://doi.org/10.1007/978-3-032-30813-9_58).
 
-If you use DOSE-I in your work, please cite the dataset:
-
+ When citing this study and our DOSE-I research in general, please use the following reference: 
 ```bibtex
-@dataset{garbe_2026_18483291,
-  author       = {Garbe, Jakob and
-                  Nguyen, Quang Vu and
-                  Kantelhardt, Jan W. and
-                  Dünninghaus, Florian and
-                  Erffmeier, Karla and
-                  Seeliger, Katja and
-                  Schmid, Thomas},
-  title        = {DOSE-I: A Multimodal Biosignal Dataset of
-                   Procedural Sedation for Endoscopy},
-  month        = jul,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.18483291},
-  url          = {https://doi.org/10.5281/zenodo.18483291}
+@incollection{garbe2026sedationEEG,
+  author    = {Garbe, Jakob and Nguyen, Quang Vu and Kantelhardt, Jan W. and Dünninghaus, Florian
+               and Erffmeier, Karla and Seeliger, Katja and Schmid, Thomas},
+  title     = {Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated
+               EEG Data of Continuous Propofol Sedation},
+  booktitle = {Artificial Intelligence in Medicine},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {16749},
+  publisher = {Springer},
+  year      = {2026}
 }
 ```
 
